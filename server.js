@@ -15,7 +15,9 @@ app.use("/api", apiRouter);
 
 // This conditional is here for testing purposes:
 if (!module.parent) {
-  app.listen(PORT);
+  app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+  });
 }
 
 module.exports = app;
